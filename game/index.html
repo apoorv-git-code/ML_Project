@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Adaptive Fighter AI</title>
+<style>body{background:#111;color:#eee;font:15px system-ui,sans-serif;max-width:1000px;margin:20px auto;padding:0 12px}
+blockquote{background:#1c1c24;border-left:4px solid #4af;margin:12px 0;padding:8px 16px}label{display:block;margin:8px 0}
+button{padding:8px 18px;font-size:15px}canvas{width:100%;background:#0b0b12;border:1px solid #333}select,input{font-size:15px}</style></head>
+<body><h2>Adaptive Fighter AI</h2>
+<div id="setup">
+<blockquote><b>Adaptive Fighter AI: data notice</b>
+<p>We are two students at UPES building a fighting game for our Applied Machine Learning Lab. While you play, the game records <b>only game events</b>: which buttons you press and when, where the fighters are, health and meter.</p>
+<ul><li>We do <b>not</b> record your face, voice, screen, name, email, SAP ID or any other personal detail.</li>
+<li>You are given an anonymous ID (for example P07). Your name is not linked to it in any file we keep.</li>
+<li>The data is used only for this course project (training and testing models, and the project report). Summary charts and results may appear in the report. Individual matches will not be shown with your name.</li>
+<li>Playing is voluntary. You can stop at any time, and you can ask us to delete your data by giving us your anonymous ID.</li></ul>
+<p>Tick the box to confirm you have read this and agree to play.</p>
+<label><input type="checkbox" id="agree"> I agree</label></blockquote>
+<label>Player ID (given by the organiser) <input id="p1" placeholder="P07" size="6"></label>
+<label>Mode <select id="mode"><option value="human_vs_cpu">Human vs CPU</option><option value="human_vs_human">Human vs Human</option><option value="scripted_bot">Scripted bot vs CPU (ID BOT01, no consent needed)</option></select></label>
+<label id="p2row" style="display:none">Player 2 ID <input id="p2" placeholder="P08" size="6"></label>
+<label>Group <select id="group"><option value="student">student</option><option value="teacher">teacher</option></select></label>
+<label>Self-rated skill (optional) <select id="skill"><option value="">skip</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select> 1 = new, 5 = expert</label>
+<button id="go" disabled>Start</button></div>
+<div id="game"><canvas id="cv" width="1000" height="340"></canvas><p id="ctl"></p></div>
+<div id="result"><h3 id="who"></h3>
+<label id="styleRow">How would you describe your style? (optional) <select id="style"><option value="">skip</option><option>rusher</option><option>defensive</option><option>combo</option><option>counter</option><option>unsure</option></select></label>
+<button id="save">Save and play next match</button> <button id="done">Finish (next player)</button>
+<p>Your match file (M000x.csv) was downloaded automatically. Click Save to also download the updated matches.csv.</p></div>
+<script src="game.js"></script></body></html>

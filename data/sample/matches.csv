@@ -1,0 +1,4 @@
+match_id,date,session_type,p1_id,p2_id,winner_id,duration_ms,p1_final_hp,p2_final_hp,group,self_rated_skill,self_described_style
+M0001,2026-11-17,human_vs_cpu,P00,CPU,CPU,27000,0,22,student,,
+M0002,2026-11-17,human_vs_cpu,P00,CPU,P00,28300,46,0,student,,
+M0003,2026-11-17,human_vs_cpu,P00,CPU,P00,22200,21,0,student,,

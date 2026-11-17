@@ -1,4 +1,20 @@
-﻿data/raw/
+# Real player data: the repo is public, never commit it
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
 __pycache__/
+*.pyc
 .venv/
-*.pkl
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Node (if the game is JavaScript)
+node_modules/
+dist/
+
+# Secrets and OS files
+.env
+.DS_Store
+Thumbs.db
