@@ -1,0 +1,1 @@
+- Drop human matches shorter than 20 seconds. Scripted bot sessions are exempt.
